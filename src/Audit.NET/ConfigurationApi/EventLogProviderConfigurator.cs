@@ -4,10 +4,10 @@ namespace Audit.Core.ConfigurationApi
 {
     public class EventLogProviderConfigurator : IEventLogProviderConfigurator
     {
-        internal string _logName = "Application";
-        internal string _sourcePath = "Application";
-        internal string _machineName = ".";
-        internal Func<AuditEvent, string> _messageBuilder;
+        public string _logName = "Application";
+        public string _sourcePath = "Application";
+        public string _machineName = ".";
+        public Func<AuditEvent, string> _messageBuilder;
 
 
         public IEventLogProviderConfigurator LogName(string logName)

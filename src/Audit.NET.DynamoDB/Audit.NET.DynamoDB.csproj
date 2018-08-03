@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Store Audit.NET Trail logs into a DynamoDB database</Description>
+    <Copyright>Copyright 2018</Copyright>
+    <AssemblyTitle>Audit.DynamoDB</AssemblyTitle>
+    <VersionPrefix>12.1.11</VersionPrefix>
+    <Authors>Omar Teodoro Oropeza</Authors>
+    <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>Audit.NET.DynamoDB</AssemblyName>
+    <PackageId>Audit.NET.DynamoDB</PackageId>
+    <PackageTags>Audit;Trail;Log;DynamoDB</PackageTags>
+    <PackageIconUrl>http://i.imgur.com/1nMVLQo.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/thepirat000/Audit.NET/tree/master/src/Audit.NET.DynamoDB</PackageProjectUrl>
+    <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.5' ">1.6.1</NetStandardImplicitPackageVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.11.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Audit.NET\Audit.NET.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+</Project>
